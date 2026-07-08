@@ -1,0 +1,16 @@
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Smart Tomcat
+.smarttomcat/
+
+# OS files
+.DS_Store
+Thumbs.db
