@@ -1,0 +1,188 @@
+:root {
+    --primary-red: #DE1819;
+    --bg-light: #f9f9f9;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light);
+     background-image: url("backimage .png");
+}
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.45);
+
+    z-index: -1;
+}
+.navbar{
+    background-color: #DE1819;
+    display: flex;
+    justify-content:space-between;
+}
+.navbar img{
+    margin-left: 10px;
+     padding: 10px;
+     padding-top: 0;
+     width: 100px;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+}
+.navbar li{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.navbar li button {
+    border-radius: 9px;
+    border: 2px solid white;
+    color: white; /* Default text color for buttons */
+    background-color: transparent; /* Make background transparent initially, so navbar's green shows through */
+    padding: 8px 15px; /* Combined padding for top/bottom and left/right */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; /* Adjust font size for better button look */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for multiple properties */
+}
+
+/* Hover effect for buttons inside the navbar list items */
+.navbar li button:hover{
+    background-color: white; /* Background becomes white on hover */
+    color: #DE1819; /* Text color changes to your green on hover */
+    border-color: white; /* Keep border white, or change if desired */
+}
+
+/* Search Section */
+.search-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.search-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: var(--primary-red);
+}
+
+.search-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.search-box input:focus {
+    border-color: var(--primary-red);
+    box-shadow: 0 4px 12px rgba(222,24,25,0.2);
+}
+
+.search-box button {
+    padding: 10px 30px;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Items Grid */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--primary-red);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+.item-card h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+.item-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+.item-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;   /* image stretch nahi hogi */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.no-items {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 50px;
+}
+.status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.item-card {
+    position: relative;
+}
+.lost { background: #ffebee; color: #d32f2f; }
+.found { background: #e8f5e9; color: #388e3c; }
+
+.view-btn{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+
+    text-decoration: none;
+    color: #DE1819;
+
+    border: 2px solid #DE1819;
+    border-radius: 8px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover{
+    background-color: #DE1819;
+    color: white;
+}
