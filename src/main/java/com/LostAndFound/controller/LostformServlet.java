@@ -60,7 +60,7 @@ public class LostformServlet extends HttpServlet {
 
         //MONGO DB CONNECTIVITY
 
-        String uri = "mongodb+srv://bhawanachaurasiya4_db_user:Bhawana77%40@cluster0.yhdkdb7.mongodb.net/?appName=Cluster0";
+        String uri = System.getenv("MONGODB_URI");
 
         try {
             MongoClient mongoClient = MongoClients.create(uri);

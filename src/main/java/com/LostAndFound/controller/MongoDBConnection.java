@@ -6,8 +6,7 @@ import com.mongodb.client.MongoDatabase;
 
 public class MongoDBConnection {
 
-    private static final String URI =
-            "mongodb+srv://bhawanachaurasiya4_db_user:Bhawana77%40@cluster0.yhdkdb7.mongodb.net/?appName=Cluster0";
+    private static final String URI = System.getenv("MONGODB_URI");
 
     public static MongoDatabase getDatabase() {
 

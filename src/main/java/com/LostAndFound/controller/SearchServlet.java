@@ -26,7 +26,8 @@ public class SearchServlet extends HttpServlet {
 
         String keyword = request.getParameter("keyword");
 
-        String uri = "mongodb+srv://bhawanachaurasiya4_db_user:Bhawana77%40@cluster0.yhdkdb7.mongodb.net/?appName=Cluster0";
+
+        String uri = System.getenv("MONGODB_URI");
 
         List<Document> itemList = new ArrayList<>();
 

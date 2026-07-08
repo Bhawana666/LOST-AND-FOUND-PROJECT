@@ -38,8 +38,9 @@ public class SignupServlet extends HttpServlet {
 
         try {
 
-            String uri = "mongodb+srv://bhawanachaurasiya4_db_user:Bhawana77%40@cluster0.yhdkdb7.mongodb.net/?appName=Cluster0";
+            String uri = System.getenv("MONGODB_URI");
 
+            //System.out.println("Mongo URI =" + uri);
             MongoClient mongoClient = MongoClients.create(uri);
             MongoDatabase database = mongoClient.getDatabase("lostfoundDB");
             MongoCollection<Document> collection = database.getCollection("Signup-Users");
