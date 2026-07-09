@@ -20,7 +20,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
 @MultipartConfig
-@WebServlet("/lostfrom")
+@WebServlet("/lostform")
 public class LostformServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

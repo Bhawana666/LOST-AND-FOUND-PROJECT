@@ -8,35 +8,35 @@ window.onload = function () {
     var viewitem = document.getElementById("view-btn");
     if(home){
       home.onclick = function(){
-          window.location.href = "/backend/Home";
+          window.location.href = "/Home";
       };
     }
 
      if(login){
        login.onclick = function(){
-          window.location.href = "/backend/login";
+          window.location.href = "/login";
        };
      }
 
      if(lost){
        lost.onclick = function(){
-          window.location.href = "/backend/lostfrom";
+          window.location.href = "/lostform";
        };
      }
 
      if(found){
       found.onclick = function(){
-         window.location.href = "/backend/foundform";
+         window.location.href = "/foundform";
       };
     }
      if(search){
       search.onclick = function(){
-         window.location.href = "/backend/search";
+         window.location.href = "/search";
       };
      }
      if(viewitem){
            viewitem.onclick = function(){
-              window.location.href = "/backend/ViewItem";
+              window.location.href = "/ViewItem";
       };
      }
      //image preview

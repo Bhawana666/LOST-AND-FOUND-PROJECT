@@ -21,7 +21,7 @@
 
     <div class="information-submit">
         <div class="items-details">
-            <form action="lostfrom" method="post" enctype="multipart/form-data">
+            <form action="lostform" method="post" enctype="multipart/form-data">
                 <div class="inputbox">
                     <label for="item-name">Item Name</label>
                     <input type="text" id="item-name" name="itemname" placeholder="Enter Item Name" required>
