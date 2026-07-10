@@ -24,9 +24,9 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.navbar img {
-    height: 100px;
-
+.navbar img{
+    height:80px;
+    width:auto;
 }
 
 .nav-links {
@@ -52,12 +52,14 @@ body {
 }
 
 /* Main Container */
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: calc(100vh - 80px);
-    padding: 0 10%;
+.container{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height:calc(100vh - 80px);
+    padding:40px 10%;
+    gap:60px;
+    box-sizing:border-box;
 }
 
 /* Hero Section */
@@ -73,15 +75,13 @@ body {
 }
 
 /* Login Card */
-.login-card {
-    background: white;
-    padding: 40px;
-    width: 100%;
-    max-width: 500px;
-    max-height: 440px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--primary-red);
+.login-card{
+    background:white;
+    padding:40px;
+    width:100%;
+    max-width:500px;
+    border-radius:20px;
+    box-sizing:border-box;
 }
 
 .login-card h2 {
@@ -155,50 +155,64 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 50px;
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        height:auto;
+        padding:15px;
     }
-    .hero-text {
-        margin-bottom: 40px;
+
+    .nav-links{
+
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:0;
+        margin-top:10px;
     }
+
+    .container{
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+
+        padding:30px 20px;
+
+        gap:35px;
+    }
+
+    .hero-text h1{
+
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .login-card{
+
+        width:100%;
+        max-width:420px;
+        padding:25px;
+    }
+
+    .input-group label{
+
+        font-size:1.2rem;
+        text-align:left;
+    }
+
+    .login-submit{
+
+        width:100%;
+    }
+
+    .forgot-pass{
+
+        text-align:right;
+    }
+
 }
-
-
-/* Container for input + eye icon */
-.password-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-/* Move eye icon inside the input */
-.eye-icon {
-    position: absolute;
-    right: 15px;
-    cursor: pointer;
-    user-select: none;
-    font-size: 18px;
-}
-
-/* Style for Forgot Password link */
-.forgot-pass {
-    text-align: right;
-    margin-top: 5px;
-}
-
-.forgot-pass a {
-    font-size: 0.85rem;
-    color: #DE1819;
-    text-decoration: none;
-}
-
-.forgot-pass a:hover {
-    text-decoration: underline;
-}
-
-
-
-

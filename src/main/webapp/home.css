@@ -1,10 +1,11 @@
-body{
+body {
     margin: 0;
     padding: 0;
 
     background-image: url("backimage .png");
 }
-body::before{
+
+body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -12,78 +13,103 @@ body::before{
     width: 100%;
     height: 100%;
 
-    background: rgba(255,255,255,0.45);
+    background: rgba(255, 255, 255, 0.45);
 
     z-index: -1;
 }
 
-.navbar{
+.navbar {
     background-color: #DE1819;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
 }
-.navbar img{
+
+.navbar img {
     margin-left: 10px;
-     padding: 10px;
-     padding-top: 0;
-     width: 100px;
+    padding: 10px;
+    padding-top: 0;
+    width: 100px;
 }
-.navbar ul{
+
+.navbar ul {
     list-style: none;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
-.navbar li{
+
+.navbar li {
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin-left: 10px;
     margin-right: 40px;
     margin-top: 20px;
 }
+
 .navbar li button {
     border-radius: 9px;
     border: 2px solid white;
-    color: white; /* Default text color for buttons */
-    background-color: transparent; /* Make background transparent initially, so navbar's green shows through */
-    padding: 8px 15px; /* Combined padding for top/bottom and left/right */
+    color: white;
+    /* Default text color for buttons */
+    background-color: transparent;
+    /* Make background transparent initially, so navbar's green shows through */
+    padding: 8px 15px;
+    /* Combined padding for top/bottom and left/right */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px; /* Adjust font size for better button look */
-    cursor: pointer; /* Indicate it's clickable */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transition for multiple properties */
+    font-size: 14px;
+    /* Adjust font size for better button look */
+    cursor: pointer;
+    /* Indicate it's clickable */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* Smooth transition for multiple properties */
 }
 
 /* Hover effect for buttons inside the navbar list items */
-.navbar li button:hover{
-    background-color: white; /* Background becomes white on hover */
-    color: #DE1819; /* Text color changes to your green on hover */
-    border-color: white; /* Keep border white, or change if desired */
+.navbar li button:hover {
+    background-color: white;
+    /* Background becomes white on hover */
+    color: #DE1819;
+    /* Text color changes to your green on hover */
+    border-color: white;
+    /* Keep border white, or change if desired */
 }
-.home-box{
+
+.home-box {
     display: flex;
     justify-content: center;
     gap: 50px;
     margin-top: 90px;
-    font-family:Arial, Helvetica;
+    font-family: Arial, Helvetica;
     color: white;
 }
-.home-box .lost{
+
+.home-box .lost {
     margin-left: 200px;
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
     height: 200px;
-    background-color:#DE1819;
+    background-color: #DE1819;
     border-radius: 30px;
     padding: 10px;
 }
-.home-box .lost h1{
+
+.home-box .lost h1 {
     padding-left: 60px;
 }
-.home-box .lost h5{
+
+.home-box .lost h5 {
     padding-left: 120px;
     margin-top: 15px;
-    font-size:medium;
+    font-size: medium;
 }
-.home-box .lost button{
+
+.home-box .lost button {
     margin-left: 120px;
     margin-top: 20px;
     border: 1px solid white;
@@ -95,30 +121,38 @@ body::before{
     color: #DE1819;
     background-color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    ;
 }
-.home-box .lost button:hover{
+
+.home-box .lost button:hover {
     background-color: transparent;
     color: white;
     border-color: white;
 }
-.home-box .found{
+
+.home-box .found {
     margin-right: 200px;
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
     height: 200px;
-    background-color:#DE1819;
+    background-color: #DE1819;
     border-radius: 30px;
     padding: 10px;
 }
-.home-box .found h1{
+
+.home-box .found h1 {
     padding-left: 50px;
 }
-.home-box .found h5{
+
+.home-box .found h5 {
     padding-left: 100px;
     margin-top: 15px;
     font-size: medium;
 }
-.home-box .found button{
+
+.home-box .found button {
     margin-left: 120px;
     margin-top: 20px;
     border: 2px solid white;
@@ -132,26 +166,29 @@ body::before{
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.home-box .found button:hover{
+
+.home-box .found button:hover {
     background-color: transparent;
     color: white;
     border-color: white;
 }
-.heading h1{
+
+.heading h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: #DE1819;
     display: flex;
     justify-content: center;
     margin-top: 60px;
 }
-.Recently-listed-item{
+
+.Recently-listed-item {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.Recently-listed-item .recent-card{
+.Recently-listed-item .recent-card {
     width: 300px;
     text-align: center;
     display: flex;
@@ -159,22 +196,23 @@ body::before{
     align-items: center;
 }
 
-.Recently-listed-item .recent-card img{
+.Recently-listed-item .recent-card img {
     border-radius: 11px;
     background-color: white;
-    width: 250px;
-    height: 250px;
+    width:100%;
+    max-width:250px;
+    height:auto;
     border: 2px solid #DE1819;
     margin: 20px;
     transition: 0.3s;
 }
 
-.Recently-listed-item .recent-card img:hover{
+.Recently-listed-item .recent-card img:hover {
     transform: scale(1.1);
     border-color: blueviolet;
 }
 
-.Recently-listed-item .recent-card .view-btn{
+.Recently-listed-item .recent-card .view-btn {
     display: inline-block;
     margin-top: 12px;
     padding: 10px 35px;
@@ -192,7 +230,144 @@ body::before{
     transition: 0.3s;
 }
 
-.Recently-listed-item .recent-card .view-btn:hover{
+.Recently-listed-item .recent-card .view-btn:hover {
     background-color: #DE1819;
     color: white;
+}
+
+/* =================== TABLET =================== */
+
+@media (max-width:1024px){
+
+    .home-box{
+
+        gap:30px;
+    }
+
+    .home-box .lost{
+
+        margin-left:40px;
+    }
+
+    .home-box .found{
+
+        margin-right:40px;
+    }
+
+}
+
+
+
+/* =================== MOBILE =================== */
+
+@media (max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        padding:15px;
+    }
+
+    .navbar img{
+
+        margin:0;
+        width:80px;
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        margin:10px 0 0 0;
+    }
+
+    .navbar li{
+
+        margin:8px;
+        font-size:16px;
+    }
+
+    .navbar li button{
+
+        font-size:13px;
+    }
+
+    .home-box{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:25px;
+
+        margin-top:40px;
+
+        padding:0 15px;
+    }
+
+    .home-box .lost,
+    .home-box .found{
+
+        width:100%;
+
+        max-width:420px;
+
+        margin:0;
+
+        height:auto;
+
+        text-align:center;
+    }
+
+    .home-box .lost h1,
+    .home-box .found h1{
+
+        padding-left:0;
+    }
+
+    .home-box .lost h5,
+    .home-box .found h5{
+
+        padding-left:0;
+
+        margin-top:10px;
+    }
+
+    .home-box .lost button,
+    .home-box .found button{
+
+        display:block;
+
+        margin:20px auto 0 auto;
+
+        padding:10px 35px;
+    }
+
+    .heading h1{
+
+        text-align:center;
+
+        font-size:32px;
+
+        padding:0 15px;
+    }
+
+    .Recently-listed-item{
+
+        padding:15px;
+
+        gap:20px;
+    }
+
+    .Recently-listed-item .recent-card{
+
+        width:100%;
+        max-width:320px;
+    }
+
 }

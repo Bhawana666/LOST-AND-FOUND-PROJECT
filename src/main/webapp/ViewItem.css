@@ -22,9 +22,12 @@ body::before{
     z-index: -1;
 }
 .navbar{
-    background-color: #DE1819;
-    display: flex;
+    background-color:#DE1819;
+    display:flex;
     justify-content:space-between;
+    align-items:center;
+    padding:10px 30px;
+    box-sizing:border-box;
 }
 .navbar img{
     margin-left: 10px;
@@ -66,6 +69,8 @@ body::before{
 .container{
     max-width:900px;
     margin:auto;
+    padding:20px;
+    box-sizing:border-box;
 }
 
 h1{
@@ -115,4 +120,86 @@ h1{
 .item-card .logo-img img{
     width:200px;
     height: 200px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:1024px){
+
+    .item-card{
+
+        gap:20px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+
+        flex-direction:column;
+        align-items:center;
+        padding:15px;
+    }
+
+    .navbar img{
+
+        width:80px;
+        margin:0;
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:0;
+        margin:10px 0;
+    }
+
+    .navbar li{
+
+        margin:8px;
+        font-size:16px;
+    }
+
+    /* Heading */
+
+    h1{
+
+        font-size:32px;
+        text-align:center;
+    }
+
+    /* Item Card */
+
+    .item-card{
+
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
+
+    .image-section img{
+
+        height:auto;
+        max-height:300px;
+    }
+
+    .details-section p{
+
+        font-size:16px;
+    }
+
+    .item-card .logo-img img{
+
+        width:140px;
+        height:140px;
+        display:block;
+        margin:auto;
+    }
+
 }
