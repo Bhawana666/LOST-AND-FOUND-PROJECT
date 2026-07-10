@@ -45,12 +45,13 @@ public class LostformServlet extends HttpServlet {
         String fileName = filePart.getSubmittedFileName();
 
         // Folder path (server ke andar save hoga)
-        String uploadPath = "B:/Java+Mongodb/backend/src/main/webapp/uploads";
+        String uploadPath = getServletContext().getRealPath("/uploads");
 
         // Folder create (agar nahi hai)
         File uploadDir = new File(uploadPath);
+
         if (!uploadDir.exists()) {
-            uploadDir.mkdir();
+            uploadDir.mkdirs();
         }
 
         // File save karo
